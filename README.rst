@@ -73,7 +73,7 @@ github repo directive
         :api: http://salt.readthedocs.org/en/v0.16.4/ref/python-api.html
         :pypi: https://pypi.python.org/pypi/salt
 
-`github_grduri <github>`_ - `travis_grduri <travis>`_ - `docs_grduri <docs>`_ - `api_grduri <api>`_ - `pypi_grduri <pypi>`_ - `homepage_grduri <homepage>`_ 2296 watchers - 813 forks
+:ref:`github_grduri <github>`_ - `travis_grduri <travis>`_ - `docs_grduri <docs>`_ - `api_grduri <api>`_ - `pypi_grduri <pypi>`_ - `homepage_grduri <homepage>`_ 2296 watchers - 813 forks
 
 .. _homepage_grduri: http://www.saltstack.org
 .. _github_grduri: https://www.github.com/saltstack/salt
