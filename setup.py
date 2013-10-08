@@ -35,7 +35,7 @@ setup(
     author='Tony Narlock',
     author_email='tony@git-pull.com',
     description='github directives and roles for sphinx',
-    long_description=__doc__,
+    long_description=open('README.rst').read(),
     zip_safe=False,
     packages=find_packages(),
     install_requires=requirements('requirements.pip'),
