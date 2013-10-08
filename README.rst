@@ -1,2 +1,85 @@
 sphinxcontrib-github
 ====================
+
+Installation
+------------
+
+.. code-block:: shell
+
+    $ pip install sphinxcontrib-github
+
+Add sphinxcontrib-github to your ``extensions`` in ``conf.py``.
+
+.. code-block:: python
+
+    extensions.append('sphinxcontrib.github')
+
+or change:
+
+.. code-block:: python
+
+    extensions = ['sphinx.ext.intersphinx', ...]
+
+to:
+
+.. code-block:: python
+
+    extensions = ['sphinx.ext.intersphinx', 'sphinxcontrib.github', ...]
+
+
+Setting up API access
+---------------------
+
+First use will require entering your github username and password. Read
+the `source for logging in`_. It will create an API key with github and
+save an api id and api key for future usage in your projects directory.
+
+Add ``.github.auth`` to your ``.gitignore``.
+
+Usage
+-----
+
+github pull request role
+""""""""""""""""""""""""
+
+.. code-block:: rest
+
+    :github-pr:`saltstack/salt/pull/7665`
+
+`salt <https://www.github.com/saltstack/salt>`_ (`https://www.github.com/saltstack/salt/pull/7665 <#7665>`_) *Fixed tags for progress events and preload*
+
+24 additions(+), 12 deletion(-) 2013-10-08
+
+github repo role
+""""""""""""""""
+
+.. code-block:: rest
+
+    :github-repo:`tony/salt-states-configs`
+
+returns:
+
+salt-states-configs: `https://www.github.com/tony/salt-states-config <github>`_
+
+github repo directive
+"""""""""""""""""""""
+
+.. code-block:: rest
+
+    .. github-repo:: saltstack/salt
+        :homepage: http://www.saltstack.org
+        :travis: https://www.travis-ci.org/saltstack/salt
+        :docs: http://salt.readthedocs.org/en/v0.16.4/
+        :api: http://salt.readthedocs.org/en/v0.16.4/ref/python-api.html
+        :pypi: https://pypi.python.org/pypi/salt
+
+`github_grduri <github>`_ - `travis_grduri <travis>`_ - `docs_grduri <docs>`_ - `api_grduri <api>`_ - `pypi_grduri <pypi>`_ - `homepage_grduri <homepage>`_ 2296 watchers - 813 forks
+
+.. _homepage_grduri: http://www.saltstack.org
+.. _github_grduri: https://www.github.com/saltstack/salt
+.. _docs_grduri: http://salt.readthedocs.org/en/v0.16.4/
+.. _api_grduri: http://salt.readthedocs.org/en/v0.16.4/ref/python-api.html
+.. _travis_grduri: http://www.travis-ci.org/saltstack/salt
+.. _pypi_grduri: https://pypi.python.org/pypi/salt
+
+.. _source for logging in: https://github.com/tony/sphinxcontrib-github/blob/master/sphinxcontrib/github.py#L40
