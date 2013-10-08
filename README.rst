@@ -46,6 +46,8 @@ github pull request role
 
     :github-pr:`saltstack/salt/pull/7665`
 
+output:
+
 `salt <https://www.github.com/saltstack/salt>`_ (`https://www.github.com/saltstack/salt/pull/7665 <#7665>`_) *Fixed tags for progress events and preload*
 
 24 additions(+), 12 deletion(-) 2013-10-08
@@ -57,7 +59,7 @@ github repo role
 
     :github-repo:`tony/salt-states-configs`
 
-returns:
+output:
 
 salt-states-configs: `https://www.github.com/tony/salt-states-config <github>`_
 
@@ -67,14 +69,15 @@ github repo directive
 .. code-block:: rest
 
     .. github-repo:: saltstack/salt
-
-        :homepage: http://www.saltstack.org
-        :travis: https://www.travis-ci.org/saltstack/salt
+        :homepage: http://www.saltstack.org/
+        :travis: https://www.travis-ci.org/saltstack/salt/
         :docs: http://salt.readthedocs.org/en/v0.16.4/
         :api: http://salt.readthedocs.org/en/v0.16.4/ref/python-api.html
         :pypi: https://pypi.python.org/pypi/salt
 
-`github`_ - `travis`_ - `docs`_ - `api`_ - `pypi`_ - `homepage`_ 2296 watchers - 813 forks
+output:
+
+`github`_ - `travis`_ - `docs`_ - `api`_ - `pypi`_ - `homepage`_ - 2296 watchers - 813 forks
 
 .. _homepage: http://www.saltstack.org
 .. _github: https://www.github.com/saltstack/salt
