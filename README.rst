@@ -67,6 +67,7 @@ github repo directive
 .. code-block:: rest
 
     .. github-repo:: saltstack/salt
+
         :homepage: http://www.saltstack.org
         :travis: https://www.travis-ci.org/saltstack/salt
         :docs: http://salt.readthedocs.org/en/v0.16.4/
