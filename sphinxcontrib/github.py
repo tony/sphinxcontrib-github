@@ -74,7 +74,10 @@ class GitHubRepoDirective(Directive):
     option_spec = {
         "travis": directives.uri,
         "docs": directives.uri,
-        "api": directives.uri
+        "api": directives.uri,
+        "pypi": directives.uri,
+        "homepage": directives.uri,
+        "use_gh_description": directives.flag,
     }
 
     def run(self):
@@ -103,21 +106,42 @@ class GitHubRepoDirective(Directive):
         title = nodes.paragraph()
         title += repo_link,
         if 'travis' in self.options:
-            title += nodes.inline('', '  - ')
+            title += nodes.inline('', ' - ')
             title += nodes.reference(
-                '', 'travis ', refuri=self.options.get('travis'))
+                '', 'travis', refuri=self.options.get('travis'))
 
         if 'docs' in self.options:
-            title += nodes.inline('', '  - ')
+            title += nodes.inline('', ' - ')
             title += nodes.reference(
-                '', 'docs ', refuri=self.options.get('travis'))
+                '', 'docs', refuri=self.options.get('docs'))
 
         if 'api' in self.options:
-            title += nodes.inline('', '  - ')
+            title += nodes.inline('', ' - ')
             title += nodes.reference(
-                '', 'api ', refuri=self.options.get('travis'))
+                '', 'api', refuri=self.options.get('api'))
 
-        return [title]
+        if 'pypi' in self.options:
+            title += nodes.inline('', ' - ')
+            title += nodes.reference(
+                '', 'pypi', refuri=self.options.get('pypi'))
+
+        if 'homepage' in self.options:
+            title += nodes.inline('', ' - ')
+            title += nodes.reference(
+                '', 'homepage', refuri=self.options.get('homepage'))
+
+        if repo.watchers > 10:
+            title += nodes.inline('', ' - %s watchers' % str(repo.watchers))
+
+        if repo.forks > 10:
+            title += nodes.inline('', ' -  %s forks' % str(repo.forks))
+
+        new_nodes = [title]
+
+        if 'use_gh_description' in self.options:
+            new_nodes.append(nodes.paragraph('', repo.description))
+
+        return new_nodes
 
 
 def purge_repos(app, env, docname):
