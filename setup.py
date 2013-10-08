@@ -8,7 +8,7 @@ github directives and roles for sphinx.
 Links
 -----
 
-* `github repository <https://www.github.com/tony/sphinxcontrib-github>`
+* `github repository <https://www.github.com/tony/sphinxcontrib-github>`_
 
 """
 from setuptools import setup, find_packages
@@ -30,6 +30,7 @@ setup(
     name='sphinxcontrib-github',
     version='0.1-dev',
     url='https://github.com/tony/sphinxcontrib-github/',
+    download_url='http://pypi.python.org/pypi/sphinxcontrib-github',
     license='BSD',
     author='Tony Narlock',
     author_email='tony@git-pull.com',
