@@ -74,13 +74,13 @@ github repo directive
         :api: http://salt.readthedocs.org/en/v0.16.4/ref/python-api.html
         :pypi: https://pypi.python.org/pypi/salt
 
-:ref:`github_grduri <github>`_ - `travis_grduri <travis>`_ - `docs_grduri <docs>`_ - `api_grduri <api>`_ - `pypi_grduri <pypi>`_ - `homepage_grduri <homepage>`_ 2296 watchers - 813 forks
+`github`_ - `travis`_ - `docs`_ - `api`_ - `pypi`_ - `homepage`_ 2296 watchers - 813 forks
 
-.. _homepage_grduri: http://www.saltstack.org
-.. _github_grduri: https://www.github.com/saltstack/salt
-.. _docs_grduri: http://salt.readthedocs.org/en/v0.16.4/
-.. _api_grduri: http://salt.readthedocs.org/en/v0.16.4/ref/python-api.html
-.. _travis_grduri: http://www.travis-ci.org/saltstack/salt
-.. _pypi_grduri: https://pypi.python.org/pypi/salt
+.. _homepage: http://www.saltstack.org
+.. _github: https://www.github.com/saltstack/salt
+.. _docs: http://salt.readthedocs.org/en/v0.16.4/
+.. _api: http://salt.readthedocs.org/en/v0.16.4/ref/python-api.html
+.. _travis: http://www.travis-ci.org/saltstack/salt
+.. _pypi: https://pypi.python.org/pypi/salt
 
 .. _source for logging in: https://github.com/tony/sphinxcontrib-github/blob/master/sphinxcontrib/github.py#L40
