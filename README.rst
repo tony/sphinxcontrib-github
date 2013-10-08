@@ -4,7 +4,7 @@ sphinxcontrib-github
 Installation
 ------------
 
-.. code-block:: shell
+.. code-block:: bash
 
     $ pip install sphinxcontrib-github
 
@@ -48,7 +48,10 @@ github pull request role
 
 output:
 
-`salt <https://www.github.com/saltstack/salt>`_ (`https://www.github.com/saltstack/salt/pull/7665 <#7665>`_) *Fixed tags for progress events and preload*
+`salt`_ (`#7665`_) *Fixed tags for progress events and preload*
+
+.. _salt: https://www.github.com/saltstack/salt
+.. _#7665: https://www.github.com/saltstack/salt/pull/7665
 
 24 additions(+), 12 deletion(-) 2013-10-08
 
@@ -57,11 +60,11 @@ github repo role
 
 .. code-block:: rest
 
-    :github-repo:`tony/salt-states-configs`
+    :github-repo:`saltstack/salt`
 
 output:
 
-salt-states-configs: `https://www.github.com/tony/salt-states-config <github>`_
+salt-states-configs: `github`_
 
 github repo directive
 """""""""""""""""""""
