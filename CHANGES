@@ -1,0 +1,13 @@
+CHANGES
+=======
+
+2013-10-17
+----------
+
+- [pypi] update MANIFEST.in to fix packaging bug
+- bump to 0.1.1
+
+2013-10-08
+----------
+
+- 0.1.0 initial release

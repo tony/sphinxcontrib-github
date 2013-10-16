@@ -28,7 +28,7 @@ else:
 
 setup(
     name='sphinxcontrib-github',
-    version='0.1.0',
+    version='0.1.1',
     url='https://github.com/tony/sphinxcontrib-github/',
     download_url='http://pypi.python.org/pypi/sphinxcontrib-github',
     license='BSD',
