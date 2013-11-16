@@ -19,12 +19,16 @@ from docutils.parsers.rst.roles import set_classes
 
 from pprint import pprint
 
-import pystache
 import os
-current_dir = os.path.abspath(os.path.dirname(__file__))
-tpl_dir = os.path.join(current_dir, 'tpl')
 
-mustache = pystache.Renderer(search_dirs=[tpl_dir])
+gh_repo_tpl = """\
+{name} watch {watchers} forks {forks}
+"""
+
+gh_pr_tpl = """\
++{{additions}} -{{deletions}} {{created_at}}
+"""
+
 
 CREDENTIALS_FILE = '.github.auth'
 from github3 import authorize, login, GitHub
@@ -90,8 +94,8 @@ class GitHubRepoDirective(Directive):
         except Exception as e:
             raise self.error("GitHub API error: %s" % e.message)
 
-        tpl = os.path.join(tpl_dir, 'gh_repo.rst')
-        html = mustache.render_path(tpl, repo.__dict__)
+        tpl = gh_repo_tpl
+        html = tpl.format(**repo.__dict__)
 
         if not hasattr(env, 'github_repo_all_repos'):
             env.github_repo_all_repos = []
@@ -163,8 +167,8 @@ def github_repo_role(name, rawtext, text, lineno, inliner, options={}, content=[
         prb = inliner.problematic(rawtext, rawtext, msg)
         return [prb], [msg]
 
-    tpl = os.path.join(tpl_dir, 'gh_repo.rst')
-    html = mustache.render_path(tpl, repo.__dict__)
+    tpl = gh_repo_tpl
+    html = tpl.format(**repo.__dict__)
 
     title = nodes.paragraph()
     title += nodes.inline('', repo_name + ': ')
@@ -200,9 +204,12 @@ def github_pr_role(name, rawtext, text, lineno, inliner, options={}, content=[])
     repo = gh.repository(repo_user, repo_name)
     pull = repo.pull_request(pull_id)
 
-    tpl = os.path.join(tpl_dir, 'gh_pr.rst')
-    pr_details = mustache.render_path(
-        tpl, pull.__dict__, repo_name=pull.repository[1])
+    tpl = gh_pr_tpl
+    logger.error(pull.__dict__)
+
+    attributes = pull.__dict__
+    attributes['repo_name'] = pull.repository[1]
+    pr_details = gh_pr_tpl.format(attributes)
 
     # <a href={{repo.html_url}}>repo_name</a>
     repo_link = nodes.reference(
