@@ -1,0 +1,11 @@
+session_name: sphinxcontrib-github
+windows:
+- layout: e998,239x56,0,0[239x38,0,0,22,239x17,0,39{119x17,0,39,23,119x17,120,39,24}]
+  options:
+    automatic-rename: 'off'
+  panes:
+  - vim
+  - pane
+  - pane
+  start_directory: /home/tony/workspace/sphinxcontrib-github
+  window_name: sphinxcontrib-github
