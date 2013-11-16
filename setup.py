@@ -12,19 +12,10 @@ Links
 
 """
 from setuptools import setup, find_packages
-try:
-    from pip.req import parse_requirements
-except ImportError:
-    def requirements(f):
-        reqs = open(f, 'r').read().splitlines()
-        reqs = [r for r in reqs if not r.strip().startswith('#')]
-        return reqs
-else:
-    def requirements(f):
-        install_reqs = parse_requirements(f)
-        reqs = [str(r.req) for r in install_reqs]
-        return reqs
 
+with open('requirements.pip') as f:
+    install_reqs = [line for line in f.read().split('\n') if line]
+    tests_reqs = []
 
 setup(
     name='sphinxcontrib-github',
@@ -38,7 +29,7 @@ setup(
     long_description=open('README.rst').read(),
     zip_safe=False,
     packages=find_packages(),
-    install_requires=requirements('requirements.pip'),
+    install_requires=install_reqs,
     namespace_packages=['sphinxcontrib'],
     classifiers=[
         'Development Status :: 3 - Alpha',

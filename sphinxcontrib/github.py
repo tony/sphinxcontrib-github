@@ -71,6 +71,7 @@ except Exception as e:
 
 
 class GitHubRepoDirective(Directive):
+    """Directive for Github Repositories."""
     required_arguments = 1
     optional_arguments = 0
     final_argument_whitespace = False
@@ -158,6 +159,7 @@ def purge_repos(app, env, docname):
 
 
 def github_repo_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    """github repo role."""
     try:
         repo_user, repo_name = text.split('/')
         repo = gh.repository(repo_user, repo_name)
@@ -178,7 +180,8 @@ def github_repo_role(name, rawtext, text, lineno, inliner, options={}, content=[
 
 
 def github_pr_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
-    """
+    """Here are some docs.
+
     :param rawtext: Text being replaced with link node.
     :param app: Sphinx application context
     :param type: Link type (issue, changeset, etc.)
