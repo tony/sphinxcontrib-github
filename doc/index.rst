@@ -12,4 +12,4 @@ sphinxcontrib-github
         roadmap
 
 .. include:: ../README.rst
-    :start-line: 4
+    :start-line: 6

@@ -1,5 +1,7 @@
-sphinxcontrib-github
-====================
+Show of github repos and pull requests in your sphinx resume / project.
+
+.. image:: https://badge.fury.io/py/tmuxp.png
+    :target: http://badge.fury.io/py/tmuxp
 
 Installation
 ------------
@@ -81,6 +83,19 @@ github repo directive
 output:
 
 `github`_ - `travis`_ - `docs`_ - `api`_ - `pypi`_ - `homepage`_ - 2296 watchers - 813 forks
+
+==============  ==========================================================
+python support  2.7
+sphinx support  >=0.6
+Docs            http://sphinxcontrib-github.rtfd.org
+API             http://sphinxcontrib-github.readthedocs.org/en/latest/api.html
+Changelog       http://sphinxcontrib-github.readthedocs.org/en/latest/history.html
+Issues          https://github.com/tony/sphinxcontrib-github/issues
+Source          https://github.com/tony/sphinxcontrib-github
+pypi            https://pypi.python.org/pypi/sphinxcontrib-github
+License         `BSD`_.
+==============  ==========================================================
+
 
 .. _homepage: http://www.saltstack.org
 .. _github: https://www.github.com/saltstack/salt
