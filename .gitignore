@@ -4,3 +4,4 @@ dist
 *.egg
 *.egg-info
 .env
+doc/_build
