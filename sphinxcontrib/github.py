@@ -205,8 +205,6 @@ def github_pr_role(name, rawtext, text, lineno, inliner, options={}, content=[])
     pull = repo.pull_request(pull_id)
 
     tpl = gh_pr_tpl
-    logger.error(pull.__dict__)
-
     attributes = pull.__dict__
     attributes['repo_name'] = pull.repository[1]
     pr_details = gh_pr_tpl.format(attributes)
