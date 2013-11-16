@@ -103,5 +103,6 @@ License         `BSD`_.
 .. _api: http://salt.readthedocs.org/en/v0.16.4/ref/python-api.html
 .. _travis: http://www.travis-ci.org/saltstack/salt
 .. _pypi: https://pypi.python.org/pypi/salt
+.. _BSD: http://opensource.org/licenses/BSD-3-Clause
 
 .. _source for logging in: https://github.com/tony/sphinxcontrib-github/blob/master/sphinxcontrib/github.py#L40
