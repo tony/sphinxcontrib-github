@@ -1,7 +1,7 @@
 Show of github repos and pull requests in your sphinx resume / project.
 
-.. image:: https://badge.fury.io/py/tmuxp.png
-    :target: http://badge.fury.io/py/tmuxp
+.. image:: https://badge.fury.io/py/sphinxcontrib-github.png
+    :target: http://badge.fury.io/py/sphinxcontrib-github
 
 Installation
 ------------

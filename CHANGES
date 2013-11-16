@@ -9,7 +9,9 @@ Changelog
 """"""""""
 
 - [pypi] update MANIFEST.in to fix packaging bug
-- bump to 0.1.1
+- [docs] readthedocs
+- no longer use pystache, remove old tpl files.
+- bump to 0.1.1, 0.1.2
 
 2013-10-08
 """"""""""

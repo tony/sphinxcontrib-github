@@ -19,7 +19,7 @@ with open('requirements.pip') as f:
 
 setup(
     name='sphinxcontrib-github',
-    version='0.1.2',
+    version='0.1.3',
     url='https://github.com/tony/sphinxcontrib-github/',
     download_url='http://pypi.python.org/pypi/sphinxcontrib-github',
     license='BSD',
